@@ -1,0 +1,27 @@
+{
+  "name": "mio-progetto",
+  "version": "1.0.0",
+  "description": "Descrizione del mio progetto",
+  "main": "src/main/js/main.js",
+  "scripts": {
+    "start": "node src/main/js/main.js",
+    "test": "jest --verbose"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "jest-junit": "^16.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "./test-results",
+          "outputName": "jest-results.xml"
+        }
+      ]
+    ]
+  }
+}
